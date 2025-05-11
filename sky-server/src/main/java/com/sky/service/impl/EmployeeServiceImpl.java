@@ -2,6 +2,7 @@ package com.sky.service.impl;
 
 import com.sky.constant.MessageConstant;
 import com.sky.constant.StatusConstant;
+import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
 import com.sky.entity.Employee;
 import com.sky.exception.AccountLockedException;
@@ -15,6 +16,15 @@ import org.springframework.util.DigestUtils;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
+    @Override
+    public void save(EmployeeLoginDTO employeeLoginDTO) {
+
+    }
+
+    @Override
+    public void save(EmployeeDTO employeeDTO) {
+
+    }
 
     @Autowired
     private EmployeeMapper employeeMapper;
