@@ -15,9 +15,9 @@ public interface EmployeeService {
 
     /**
      * 新增员工业务方法
-     * @param employeeLoginDTO
+     * @param employeeDTO
      */
-    void save(EmployeeLoginDTO employeeLoginDTO);
+
 
     void save(EmployeeDTO employeeDTO);
 }
