@@ -24,8 +24,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService {
-    //@Override
+class EmployeeServiceImpl implements EmployeeService {
+    @Override
     public void save(EmployeeLoginDTO employeeLoginDTO) {
     }
     @Autowired
@@ -105,5 +105,20 @@ public class EmployeeServiceImpl implements EmployeeService {
         List<Employee>records = page.getResult();
 
         return new PageResult(total,records);
+    }
+
+    /**
+     * 启用禁用员工账号
+     * @param status
+     * @param id
+     */
+
+
+    public void startOrStop(Integer status, Long id) {
+        //update employee set status = ? where id = ?
+        Employee employee = new Employee();
+        employee.setId(id);
+        employee.setStatus(status); // 添加这一行，设置状态
+        employeeMapper.update(employee);
     }
 }
