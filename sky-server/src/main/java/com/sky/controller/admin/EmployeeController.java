@@ -110,6 +110,7 @@ public class EmployeeController {
      * * @param id
      * * @return
      */
+    //TODO @PostMapping("/status/{status}") or @GETMapping("/status/{status}")
     @PostMapping("/status/{status}")
     @ApiOperation("启用禁用员工账号")
     public Result startOrStop(@PathVariable Integer status, Long id) {
@@ -117,4 +118,33 @@ public class EmployeeController {
         employeeService.startOrStop(status,id);
         return Result.success();
     }
+
+    /**
+     * 根据员工id查询信息
+     * @param id
+     * @return
+     */
+    //TODO @PostMapping("/{id}")对对对就是这个问题哈哈哈哈哈哈
+    @GetMapping("/{id}")
+    @ApiOperation("根据员工id查询信息")
+    public Result<Employee>getById(@PathVariable Long id){
+        Employee employee = employeeService.getById(id);
+        return Result.success(employee);
+    }
+
+    /**
+     * 编辑员工信息
+     * @param employeeDTO
+     * @return
+     */
+    @PutMapping
+    @ApiOperation("编辑员工信息")
+    public Result update(@RequestBody EmployeeDTO employeeDTO){
+        log.info("编辑员工信息{}", employeeDTO);
+        employeeService.update(employeeDTO);
+        return Result.success();
+    }
+
+
+
 }
