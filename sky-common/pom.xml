@@ -39,6 +39,7 @@
         <dependency>
             <groupId>com.aliyun.oss</groupId>
             <artifactId>aliyun-sdk-oss</artifactId>
+
         </dependency>
         <dependency>
             <groupId>javax.xml.bind</groupId>
