@@ -13,10 +13,12 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PageResult implements Serializable {
+//public class PageResult implements Serializable {
+public class PageResult<T> implements Serializable {  // 添加泛型参数 <T>
 
     private long total; //总记录数
 
-    private List records; //当前页数据集合
+   // private List records; //当前页数据集合
+   private List<T> records; // 当前页数据集合（明确泛型类型）
 
 }

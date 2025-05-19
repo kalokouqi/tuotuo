@@ -103,4 +103,17 @@ public class DishServiceImpl implements DishService {
             dishMapper.deleteById(id);
         //删除口味数据（与菜品关联的）
             dishFlavorMapper.deleteByDishId(id);
-}}}
+}}
+    /**
+     * 根据分类id查询菜品
+     * @param categoryId
+     * @return
+     */
+    public List<Dish> list(Long categoryId) {
+        Dish dish = Dish.builder()
+                .categoryId(categoryId)
+                .status(StatusConstant.ENABLE)
+                .build();
+        return dishMapper.list(dish);
+    }
+}

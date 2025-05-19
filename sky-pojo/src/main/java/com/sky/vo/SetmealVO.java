@@ -44,5 +44,6 @@ public class SetmealVO implements Serializable {
     private String categoryName;
 
     //套餐和菜品的关联关系
+    @Builder.Default // 默认值 为了防止空指针
     private List<SetmealDish> setmealDishes = new ArrayList<>();
 }
