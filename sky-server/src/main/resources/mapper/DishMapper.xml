@@ -49,6 +49,8 @@
             <if test="status != null">
                 and d.status = #{status}
             </if>
+            <!-- 添加一个永真条件，避免 WHERE 为空 -->
+            and 1=1
         </where>
         order by d.create_time desc
     </select>

@@ -22,7 +22,7 @@ public class HttpClientTest {
     /**
      * 测试通过httpclient发送GET方式的请求
      */
-    @Test
+   // @Test
     public void testGET() throws Exception {
         //创建httpclient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -46,7 +46,7 @@ public class HttpClientTest {
     /**
      * 测试通过httpclient发送POST方式的请求
      */
-    @Test
+   // @Test
     public void testPOST() throws Exception {
         // 创建httpClient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();

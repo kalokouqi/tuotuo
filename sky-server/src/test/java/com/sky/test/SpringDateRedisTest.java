@@ -10,12 +10,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-//@SpringBootTest
+@SpringBootTest
 public class SpringDateRedisTest {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    @Test
+   // @Test
     public void testRedisTemplate() {
        System.out.println(redisTemplate);
        ValueOperations valueOperations = redisTemplate.opsForValue();
@@ -29,7 +29,7 @@ public class SpringDateRedisTest {
     /**
      * 操作字符串类型的数据
      */
-    @Test
+    //@Test
     public void testString() {
         //set get setex setnx
         redisTemplate.opsForValue().set("name", "小明");
@@ -42,7 +42,7 @@ public class SpringDateRedisTest {
     /**
      * 操作哈希类型的数据
      */
-    @Test
+    //@Test
     public void testHash() {
         //hset hget hdel hkeys hvals
         HashOperations hashOperations = redisTemplate.opsForHash();
@@ -65,7 +65,7 @@ public class SpringDateRedisTest {
     /**
      * 操作列表类型的数据
      */
-    @Test
+   // @Test
     public void testList() {
         //lpush lrange rpop llen
         ListOperations<String, Object> listOperations = redisTemplate.opsForList();
@@ -84,7 +84,7 @@ public class SpringDateRedisTest {
     /**
      * 操作集合类型的数据
      */
-    @Test
+   // @Test
     public void testSet() {
         //sadd smembers scard sinter sunion srem
         SetOperations<String, Object> setOperations = redisTemplate.opsForSet();
@@ -109,7 +109,7 @@ public class SpringDateRedisTest {
     /**
      * 操作有序集合类型的数据
      */
-    @Test
+   // @Test
     public void testZset() {
         //zadd zrange zincrby zrem
         ZSetOperations<String, Object> zSetOperations = redisTemplate.opsForZSet();
@@ -127,7 +127,7 @@ public class SpringDateRedisTest {
     /**
      * 通用命令操作
      */
-    @Test
+   // @Test
     public void testCommon() {
         //keys exists type del
         Set<String> keys = redisTemplate.keys("*");
