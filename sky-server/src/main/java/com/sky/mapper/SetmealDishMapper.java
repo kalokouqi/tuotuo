@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import com.sky.entity.SetmealDish;
@@ -13,12 +14,11 @@ public interface SetmealDishMapper {
     /**
      * 根据菜品id查询套餐id
      *
-     * @param dishIds
+     * @param dishId
      * @return
      */
-
-    List<Long> getSetmealIdsByDishIds(List<Long> dishIds);
-
+   List<Long> getSetmealIdByDishIds(@Param("dishId") List<Long> dishId);
+    //List<Long> getSetmealIdByDishIds(@Param("dishIds") List<Long> dishIds);
     /**
      * 批量插入
      *
@@ -41,6 +41,5 @@ public interface SetmealDishMapper {
      */
     @Select("select * from setmeal_dish where setmeal_id = #{setmealId}")
     List<SetmealDish> getDishBySetmealId(Long setmealId);
-
 
 }
