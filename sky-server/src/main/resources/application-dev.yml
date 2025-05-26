@@ -17,6 +17,14 @@ sky:
     port: 6379
     password: 1234
     database: 10
+
   wechat:
-    appid: wx3df3947e7129608c
-    secret: 554380c77f8d223eccc7ea1046c0ec43
+    appid: wxffb3637a228223b8
+    secret: 84311df9199ecadf4f12d27b6b9522d
+    mchid: 1561414331
+    mchSerialNo: 4B3B3DC35414AD05B1B755BAF8DE9CC7CF407606
+    privateKeyFilePath: D:/pay/apiclient_key.pem
+    apiV3Key: CZBK51236435wxpay435434233FFDuv3
+    weChatPayCertFilePath: D:/pay/wechatpay_166D9G8F67F45C7D07CE98952A96EC980368ACFC.pem
+    notifyUrl: https://58869fb.r2.cpolar.top/notify/paySuccess
+    refundNotifyUrl: https://58869fb.r2.cpolar.top/notify/refundSuccess
